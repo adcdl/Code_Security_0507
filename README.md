@@ -37,7 +37,7 @@ Amazon的官方说法是：
 
 代码示例，假设你用类似的Agent工具管理基础设施：
 
-<img width="737" height="282" alt="image" src="https://github.com/user-attachments/assets/fc7c716c-7d9b-42b3-bb2a-02e4e6552c56" />
+<img width="737" height="282" alt="image" src="assets/1.png" />
 
 
 这不是夸张。Kiro做的本质上就是这个逻辑——它判断重建比修复更”干净”，但完全没考虑这是个正在运行的生产环境。
@@ -67,14 +67,14 @@ Amazon说这是”权限配错了”，问题是——如果没有AI Agent，一
 
 AI Agent的执行环境必须跟生产环境物理隔离。不是”我相信它不会乱来”，而是它根本没有权限乱来。
 
-<img width="738" height="267" alt="image" src="https://github.com/user-attachments/assets/1cce605a-5a90-4c0f-bb78-5fbf587d824b" />
+<img width="738" height="267" alt="image" src="assets/2.png" />
 
 
 强制Human-in-the-Loop
 
 任何涉及生产环境的AI Agent操作，必须有人工确认步骤。Kiro默认其实是要授权的（”by default, Kiro requests authorization before taking any action”），但AWS内部显然关掉了这个限制。
 
-<img width="956" height="776" alt="image" src="https://github.com/user-attachments/assets/6ed62ac2-a8e6-401a-a93b-8cf33434e73e" />
+<img width="956" height="776" alt="image" src="assets/3.png" />
 
 
 ## 操作审计和回滚
